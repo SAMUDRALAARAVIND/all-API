@@ -22,6 +22,7 @@ app.post("/fetch",(req,resp)=>{
       }
       resp.send(data)
     })
-app.listen(8000,()=>{
-    console.log(`App is listening on poort 8000`)
+const port = process.env.PORT || 8080
+app.listen(port,()=>{
+    console.log(`App is listening on poort ${port}`)
 })
