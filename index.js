@@ -5,6 +5,7 @@ app.get("/",(req,resp)=>{
     resp.send("hello world")
 })
 app.get("/api",(req,resp)=>{
+    console.log("requested");
     var data = {
         name:"samudrala aravind",
         age:20,
