@@ -22,27 +22,11 @@
             <div class="col-sm-6">
         <form action="/createapikey" method="POST" style="background-color: #e7e7e7;padding:30px">
              <input type="text" name="email" placeholder="Email"  class="form-control" /><br>
-             <input type="password" name="password" placeholder="Password" class="form-control" id="p"><br>
-             <b onclick="showPassword()" id="b" class="btn butt btn-outline-primary btn-xs" >Show</b>
              <button type="submit" class="btn butt btn-outline-primary btn-xs">Create API key</button>
          </form>
          </div>
          <div class="col-sm-3"></div>
         </div>
     </div>
-    <script>
-        function showPassword(){
-            var password = document.getElementById("p");
-            var button = document.getElementById("b");
-            if(password.type=="password"){
-                password.type = "text";
-                button.innerHTML = "Hide";
-            }
-            else{
-                password.type="password";
-                button.innerHTML = "Show";
-            }
-        }
-    </script>
 </body>
 </html>

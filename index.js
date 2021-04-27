@@ -3,7 +3,7 @@ const app = express()
 const bodyParser = require("body-parser")
 const createApiKey = require("./apis/generateapi")
 const axios = require("axios")
-
+const connection = require("./apis/connection")
 
 app.set("views","views")
 app.set("view engine","ejs")
@@ -43,4 +43,13 @@ app.get("/apikey/success",(req,resp)=>{
     }
     else 
         resp.send(`<h1>Congratulations!</h1><br>Your API key is: <b>${apiKey}</b>`)
+})
+
+
+
+app.get("/allusers",(req,resp)=>{
+    connection.query("select * from api;",(err,result)=>{
+        if(err) resp.send("<h1>An error occured</h1><br>"+err)
+        else resp.send(result)
+    })
 })
