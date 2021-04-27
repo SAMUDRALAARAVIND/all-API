@@ -1,10 +1,10 @@
 const mysql = require("mysql")
 
 var connection = mysql.createConnection({
-    host:"b0pvcyaxjphwkhrcfnkl-mysql.services.clever-cloud.com",
-    user:"uelrcdmrmg8d8gnz",
-    password:"SWoOWs0wmebIt2e7bg4n",
-    database:"b0pvcyaxjphwkhrcfnkl"
+    host:"*************************************",
+    user:"***************",
+    password:"***************",
+    database:"*************"
 })
 function getData(){
     return new Promise((resolve)=>{
